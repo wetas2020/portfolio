@@ -2,6 +2,7 @@
 
 html {
     font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1px;
 }
 
 * {
@@ -13,6 +14,12 @@ html {
     --primary-color: #000;
     --secondary-color: #18181b;
     --border-color: #3f3f4666;
+
+    --title-color: #f4f4f5;
+    --subtitle-color: #a1a1aa;
+
+    --bgHeader-color: #27272a;
+    --blue-color: #5dbcfc;
 }
 
 /* .light {
@@ -35,4 +42,37 @@ body {
 .devider {
     border-bottom: 2px solid var(--border-color);
     margin: 3rem 0;
+}
+
+li {
+    list-style: none;
+    /* padding: 1rem; */
+    /* border-bottom: 2px solid var(--border-color); */
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+    transition: 0.2s;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.border {
+    border: 2px solid red;
+}
+
+button {
+    all: unset;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.9);
 }
