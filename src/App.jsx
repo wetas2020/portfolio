@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="container">
             <Header />
-            <div className="devider"></div>
+            {/* <div className="devider"></div> */}
             <Hero />
             <div className="devider"></div>
             <Main />

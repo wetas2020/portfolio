@@ -40,7 +40,7 @@ export default function Header() {
                     <ul className="modal ">
                         <li>
                             <button
-                                className="icon-clear"
+                                className="icon-close"
                                 onClick={() => {
                                     setShowModal(false);
                                 }}

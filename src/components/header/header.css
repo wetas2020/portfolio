@@ -71,14 +71,13 @@ header button.mode:hover {
     border: 1px solid #f4a560;
 }
 
-header .icon-clear {
+header .icon-close {
     color: var(--subtitle-color);
     font-size: 1.5rem;
-    font-size: large;
-    transition: 0.3s;
+    transition: 0.5s all ease-in-out;
 }
 
-header .icon-clear:hover {
+header .icon-close:hover {
     color: var(--subtitle-color);
     font-size: 1.7rem;
     color: crimson;
@@ -94,6 +93,7 @@ header .fixed {
     inset: 0;
     background-color: #282830e8;
     z-index: 11;
+    backdrop-filter: blur(4px);
 }
 
 @keyframes modalScaling {
@@ -112,7 +112,7 @@ header .fixed {
 
 header .fixed ul.modal {
     animation: modalScaling 0.7s;
-    width: 85%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
