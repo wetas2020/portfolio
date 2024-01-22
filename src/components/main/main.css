@@ -3,6 +3,7 @@ table of contents
 =========================
 1.0 - Left section
 1.1 - Buttons & Icons
+1.2 - Responsive Design ( Media Queries)
 */
 
 main.flex {
@@ -118,6 +119,10 @@ main section.right-section.flex {
     transition: 0.3s; */
 }
 
+/* ======================
+1.2 - Responsive Design ( Media Queries)
+========================= */
+
 @media (max-width: 768px) {
     main.flex {
         flex-direction: column;
@@ -135,7 +140,6 @@ main section.right-section.flex {
     main section.left-section.flex button {
         width: 7rem;
         padding: 0.8rem 0;
-        /* margin-bottom: 10px; */
         font-size: 0.9rem;
     }
 }
