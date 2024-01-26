@@ -129,6 +129,7 @@ button:active {
 .scrollToTop {
     position: fixed;
     background-color: #1976d2d9;
+    color: #888;
     width: 2.6rem;
     height: 2.6rem;
     border-radius: 50%;
@@ -136,10 +137,13 @@ button:active {
     right: 3%;
     text-align: center;
     border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.25rem;
 }
 
 .scrollToTop:hover {
     background-color: #1976d2;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.591);
 }
 
 @media (max-width: 600px) {
@@ -160,5 +164,6 @@ button:active {
         opacity: 0.6;
         width: 2.2rem;
         height: 2.2rem;
+        font-size: 1rem;
     }
 }
