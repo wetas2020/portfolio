@@ -34,9 +34,21 @@ html {
     --container-padding: 4.8rem;
 }
 
-/* .light {
-    --primary-color: #fff;
-} */
+.light {
+    --primary-color: #fafafa;
+    --secondary-color: #fff;
+    --border-color: rgba(202, 202, 202, 0.518);
+
+    --title-color: rgb(39 39 42);
+    --subtitle-color: rgb(82 82 91);
+
+    --bgHeader-color: rgb(253, 253, 253);
+    --blue-color: rgb(0, 149, 246);
+
+    --icon-hover-color: #333;
+
+    --container-padding: 4.8rem;
+}
 
 body {
     background-color: var(--primary-color);

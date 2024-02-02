@@ -49,6 +49,10 @@ main section.left-section.flex button.active {
     border: 1px solid var(--blue-color);
 }
 
+.light main section.left-section.flex button.active {
+    border: 1px solid #000;
+}
+
 /* ==============================
 1.1 - Right section ===> Cards
 ================================= */
@@ -62,14 +66,21 @@ main section.right-section.flex {
 }
 
 .card {
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.15);
     border: 1px solid #5dbcfc4d;
     border-radius: 5px;
     transition: 0.3s;
     background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
 }
 
+.light .card,
+.light .card:hover {
+    border: none;
+}
+
 .card:hover {
     border: 1px solid var(--blue-color);
+    background-color: rgba(246, 246, 246);
     rotate: 1deg;
     scale: 1.01;
     cursor: pointer;

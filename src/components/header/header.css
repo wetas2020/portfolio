@@ -63,6 +63,11 @@ header button.mode {
     color: var(--subtitle-color);
     border: 1px solid #f4a5603f;
     transition: 0.2s;
+    box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
+}
+
+header .icon-sun {
+    color: rgb(255, 165, 0);
 }
 
 header .icon-menu:hover,
