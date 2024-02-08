@@ -1,7 +1,9 @@
 import React from 'react';
 import './contact.css';
 import { useForm, ValidationError } from '@formspree/react';
-
+import Lottie from 'lottie-react';
+import doneAnimation from '../../animations/done.json';
+import contactUsAnimation from '../../animations/contact_us.json';
 export default function Contact() {
     const [state, handleSubmit] = useForm('xgegadae');
 
@@ -15,7 +17,7 @@ export default function Contact() {
                 Contact us for more information and get notified when i publish something new.
             </p>
 
-            <div className="flex">
+            <div style={{ justifyContent: 'space-between' }} className="flex">
                 <form className="" onSubmit={handleSubmit}>
                     <div className="flex">
                         <label htmlFor="email">Email Address:</label>
@@ -42,12 +44,24 @@ export default function Contact() {
                         {state.submitting ? 'Submitting...' : 'Submit'}
                     </button>
                     {state.succeeded && (
-                        <p style={{ fontSize: '18px', marginTop: '1.7rem' }}>
+                        <p className="flex" style={{ fontSize: '18px', marginTop: '1.7rem' }}>
+                            <Lottie
+                                loop={false}
+                                style={{ height: '33px', paddingRight: '5px' }}
+                                animationData={doneAnimation}
+                            />
                             Your message has been sent successfully{' '}
                         </p>
                     )}
                 </form>
-                <div className="animation border">animation</div>
+                <div className="animation">
+                    <Lottie
+                        className="contact-us-animation"
+                        // loop={false}
+                        style={{ height: '355px' }}
+                        animationData={contactUsAnimation}
+                    />
+                </div>
             </div>
         </section>
     );
