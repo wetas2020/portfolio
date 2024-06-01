@@ -5,8 +5,13 @@ import { myProjects } from './myProjects';
 export default function Main() {
     const [currentActive, setCurrentActive] = useState('all');
     const [projects, setProjects] = useState(myProjects);
+
+    const openLink = (url) => {
+        window.open(url, '_blank');
+    };
+
     return (
-        <main className=" flex">
+        <main className="flex">
             <section className="left-section flex">
                 <button
                     className={currentActive === 'all' ? 'active' : null}
@@ -18,84 +23,65 @@ export default function Main() {
                     All Projects
                 </button>
                 <button
-                    className={currentActive === 'css' ? 'active' : null}
+                    className={currentActive === 'full-stack' ? 'active' : null}
                     onClick={() => {
-                        setCurrentActive('css');
-                        const filteredProjects = myProjects.filter((item) => {
-                            const arr = item.category.filter((myItem) => {
-                                return myItem === 'css';
-                            });
-                            return arr[0] === 'css';
-                        });
+                        setCurrentActive('full-stack');
+                        const filteredProjects = myProjects.filter((item) =>
+                            item.category.includes('full-stack')
+                        );
                         setProjects(filteredProjects);
                     }}
                 >
-                    HTML & CSS
+                    Full Stack
                 </button>
                 <button
-                    className={currentActive === 'javascript' ? 'active' : null}
+                    className={currentActive === 'front-end' ? 'active' : null}
                     onClick={() => {
-                        setCurrentActive('javascript');
-                        const filteredProjects = myProjects.filter((item) => {
-                            const arr = item.category.filter((myItem) => {
-                                return myItem === 'javascript';
-                            });
-                            return arr[0] === 'javascript';
-                        });
+                        setCurrentActive('front-end');
+                        const filteredProjects = myProjects.filter((item) =>
+                            item.category.includes('front-end')
+                        );
                         setProjects(filteredProjects);
                     }}
                 >
-                    Javascript
+                    Front-end
                 </button>
                 <button
-                    className={currentActive === 'react' ? 'active' : null}
+                    className={currentActive === 'back-end' ? 'active' : null}
                     onClick={() => {
-                        setCurrentActive('react');
-                        const filteredProjects = myProjects.filter((item) => {
-                            const arr = item.category.filter((myItem) => {
-                                return myItem === 'react';
-                            });
-                            return arr[0] === 'react';
-                        });
+                        setCurrentActive('back-end');
+                        const filteredProjects = myProjects.filter((item) =>
+                            item.category.includes('back-end')
+                        );
                         setProjects(filteredProjects);
                     }}
                 >
-                    React & MUI
+                    Back-end
                 </button>
                 <button
-                    className={currentActive === 'node' ? 'active' : null}
+                    className={currentActive === 'mobile' ? 'active' : null}
                     onClick={() => {
-                        setCurrentActive('node');
-                        const filteredProjects = myProjects.filter((item) => {
-                            const arr = item.category.filter((myItem) => {
-                                return myItem === 'node';
-                            });
-                            return arr[0] === 'node';
-                        });
+                        setCurrentActive('mobile');
+                        const filteredProjects = myProjects.filter((item) =>
+                            item.category.includes('mobile')
+                        );
                         setProjects(filteredProjects);
                     }}
                 >
-                    Node & Express
+                    Mobile
                 </button>
             </section>
             <section className="right-section flex">
                 {projects.map((item, index) => {
                     return (
-                        <article key={index} className="card">
-                            <img width={266} src={item.imgPath} alt="first-project" />
+                        <article key={index} className="card" onClick={() => openLink(item.link)}>
+                            <img width={266} src={item.imgPath} alt={item.title} />
                             <div style={{ width: '266px' }} className="box">
                                 <h1 className="title">{item.title}</h1>
-                                <p className="subtitle">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Nesciunt harum aliquid corporis, commodi rerum non laborum earum
-                                    totam quae dicta
-                                </p>
+                                <p className="subtitle">{item.description}</p>
+                                <h4 style={{ marginBottom: '7px' }}>STACK: {item.stack}</h4>
                                 <div className="icons flex">
-                                    <div style={{ gap: '11px' }} className="flex">
-                                        <div className="icon-link"></div>
-                                        <div className="icon-github"></div>
-                                    </div>
-                                    <a className="link flex" href="">
+                                    <a className="link flex" href={item.link} target="_blank" rel="noopener noreferrer">
                                         more<span className="icon-arrow-right"></span>
                                     </a>
                                 </div>
