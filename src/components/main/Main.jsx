@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './main.css';
 import { myProjects } from './myProjects';
 
+
 export default function Main() {
     const [currentActive, setCurrentActive] = useState('all');
     const [projects, setProjects] = useState(myProjects);

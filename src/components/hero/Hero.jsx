@@ -13,10 +13,7 @@ export default function Hero() {
                 </div>
                 <h1 className="title">Software engineer, geek and musician.</h1>
                 <p className="subtitle">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit incidunt
-                    necessitatibus exercitationem soluta consequuntur quos iusto? Nihil eveniet
-                    recusandae vero voluptate fugiat, et consequuntur magnam modi eaque quisquam
-                    sapiente aperiam.
+                Passionate about crafting innovative software solutions and transforming ideas into reality. With a blend of technical expertise and creative flair, I thrive on challenges and love collaborating to create impactful projects. Let's build something amazing together!
                 </p>
                 <div className="all-icons flex">
                     <div className="icon icon-twitter"></div>
