@@ -15,11 +15,14 @@ export const myProjects = [
         stack: ['JavaScript, Rest'],
         link: 'https://deluxe-fenglisu-eceec9.netlify.app/'
     },
-    // {
-    //     title: 'css project',
-    //     category: ['css'],
-    //     imgPath: './images/3.jpg'
-    // },
+    {
+        title: 'Aramex Shipping Cost Calculator',
+        category: ['full-stack', 'front-end', ],
+        imgPath: './images/3.png',
+        description: 'A shipping cost calculator for Aramex that computes shipping costs based on weight, zone, and destination. It features front-end form handling, back-end API integration, and a multi-language toggle, providing accurate rates with user-friendly input validation.',
+        stack: ['JavaScript, HTML, CSS'],
+        link: 'https://aramex-shipping-rate.netlify.app/'
+    }
     // {
     //     title: 'react project',
     //     category: ['react'],
