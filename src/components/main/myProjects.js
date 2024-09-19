@@ -21,7 +21,7 @@ export const myProjects = [
         imgPath: './images/3.png',
         description: 'A shipping cost calculator for Aramex that computes shipping costs based on weight, zone, and destination. It features front-end form handling, back-end API integration, and a multi-language toggle, providing accurate rates with user-friendly input validation.',
         stack: ['JavaScript, HTML, CSS'],
-        link: 'https://aramex-shipping-rate.netlify.app/'
+        link: 'https://aramex-shipping.netlify.app/'
     }
     // {
     //     title: 'react project',
